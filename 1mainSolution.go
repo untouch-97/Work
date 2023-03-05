@@ -41,6 +41,7 @@ func main() {
 	t, f, a := 0, 0, 0
 
 	for i := 0; i < 99; i++ {
+		a += 0
 		t += 3
 		f += 5
 		all = append(all, i)
