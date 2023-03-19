@@ -10,14 +10,15 @@ import "fmt"
 // твоя функция должна возвращать 2 значения - строку и ошибку (если ошибки нет, то nil)
 
 func ageCategory(age int) (string, error) {
-	if age <= 0 {
-		return "", fmt.Errorf("Ошибка: введен не верный возраст")
-	} else if age < 18 {
+	switch {
+	case age <= 0:
+		return "", fmt.Errorf("Ошибка: введен неверный возраст")
+	case age < 18:
 		return "молодой огурчик", nil
-	} else if age < 60 {
+	case age < 60:
 		return "уже не такой молодой огурчик", nil
-	} else {
-		return "пажилая каструля", nil
+	default:
+		return "пажилая кастрюля", nil
 	}
 }
 func main() {
