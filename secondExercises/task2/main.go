@@ -2,28 +2,22 @@ package main
 
 import (
 	"fmt"
-	"strings"
 )
 
+type list struct {
+	name1, name2, name3, name4, name5, name6, name7, name8, name9, name10 string
+}
+
 func main() {
-	m := make(map[string]string)
-	m["name1"] = "Alik"
-	m["name2"] = "Baha"
-	m["name3"] = "Vitya"
-	m["name4"] = "Dilshod"
-	m["name5"] = "Dima"
-	m["name6"] = "Fatima"
-	m["name7"] = "Ilya"
-	m["name8"] = "Ivan"
-	m["name9"] = "Svet"
-	m["name10"] = "Vasya"
+	m := make(map[string]list)
+	m["names"] = list{name1: "Alik", name2: "Baha", name3: "Vitya", name4: "Dilshod", name5: "Dima", name6: "Fatima", name7: "Ilya", name8: "Ivan", name9: "Svet", name10: "Vasya"}
 
 	var n string
 	fmt.Println("your name?")
-	fmt.Scan(&n)
+	fmt.Scanln(&n)
 
-	if m[strings.ToLower(n)] != "" {
-		fmt.Println("Correct")
+	if name, ok := m[n]; ok {
+		fmt.Println("Correct: ", name)
 	} else {
 		fmt.Println("Wrong")
 	}
