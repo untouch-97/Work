@@ -16,9 +16,9 @@ func main() {
 	fmt.Println("your name?")
 	fmt.Scanln(&n)
 
-	if name, ok := m[n]; ok {
-		fmt.Println("Correct: ", name)
+	if _, ok := m[n]; ok {
+		fmt.Println(n, "is in the list")
 	} else {
-		fmt.Println("Wrong")
+		fmt.Println(n, "is not in the list")
 	}
 }
