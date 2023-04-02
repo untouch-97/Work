@@ -4,21 +4,27 @@ import (
 	"fmt"
 )
 
-type list struct {
-	name1, name2, name3, name4, name5, name6, name7, name8, name9, name10 string
-}
-
 func main() {
-	m := make(map[string]list)
-	m["names"] = list{name1: "Alik", name2: "Baha", name3: "Vitya", name4: "Dilshod", name5: "Dima", name6: "Fatima", name7: "Ilya", name8: "Ivan", name9: "Svet", name10: "Vasya"}
+	m := map[string]bool{
+		"Alik":    true,
+		"Baha":    true,
+		"Vitya":   true,
+		"Dilshod": true,
+		"Dima":    true,
+		"Fatima":  true,
+		"Ilya":    true,
+		"Ivan":    true,
+		"Svet":    true,
+		"Vasya":   true,
+	}
 
-	var n string
+	var name string
 	fmt.Println("your name?")
-	fmt.Scanln(&n)
+	fmt.Scanln(&name)
 
-	if _, ok := m[n]; ok {
-		fmt.Println(n, "is in the list")
+	if _, ok := m[name]; ok {
+		fmt.Println(name, "is in the list")
 	} else {
-		fmt.Println(n, "is not in the list")
+		fmt.Println(name, "is not in the list")
 	}
 }
