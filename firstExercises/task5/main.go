@@ -1,6 +1,9 @@
 package main
 
-import "fmt"
+import (
+	"errors"
+	"fmt"
+)
 
 // написать функцию, которая принимает аргумент возраст, и возвращает строку, одну из
 // "молодой огурчик" < 18
@@ -12,7 +15,7 @@ import "fmt"
 func ageCategory(age int) (string, error) {
 	switch {
 	case age <= 0:
-		return "", fmt.Errorf("Ошибка: введен неверный возраст")
+		return "", errors.New("ошибка: введен неверный возраст")
 	case age < 18:
 		return "молодой огурчик", nil
 	case age < 60:
