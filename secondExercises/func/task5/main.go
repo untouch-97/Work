@@ -18,5 +18,4 @@ func main() {
 	}
 	key := person{"Alik", 25}
 	fmt.Println(reads(m, key))
-
 }
