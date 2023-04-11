@@ -7,9 +7,9 @@ type person struct {
 	Age  int
 }
 
-func reads(m map[person]bool, key person) bool {
+func reads(m map[person]bool, key person) {
 	value, _ := m[key]
-	return value
+
 }
 
 func main() {
@@ -17,5 +17,5 @@ func main() {
 		{"Alik", 25}: true,
 	}
 	key := person{"Alik", 25}
-	fmt.Println(reads(m, key))
+
 }
