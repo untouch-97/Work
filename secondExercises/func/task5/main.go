@@ -16,7 +16,7 @@ func main() {
 	m := map[person]bool{
 		{"Alik", 25}: true,
 	}
-	for key := range m {
-		fmt.Println(reads(m, key))
-	}
+	key := person{"Alik", 25}
+	fmt.Println(reads(m, key))
+
 }
