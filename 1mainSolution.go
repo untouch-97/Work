@@ -1,6 +1,9 @@
 package main
 
-// first task
+// Во-первых, каждую задачку можно вынести в отдельную папку, где создать файл с package main и func main(),
+// и тогда не надо будет комментить код, и можно будет описание к задаче в этом же файле/папке поместить.
+
+// first task - тут ОК
 //func main() {
 //
 //	for i := 0; i < 50*2; i += 2 {
@@ -8,7 +11,7 @@ package main
 //	}
 //}
 
-// second task
+// second task - тут ОК, но можно без переменной b было обойтись
 //func main() {
 //	b := 0
 //	for i := 0; i < 99; i += 3 {
@@ -17,7 +20,7 @@ package main
 //	}
 //}
 
-// // third task
+// // third task - НЕ ОК вообще: читай задание
 //
 //	func main() {
 //		even := 0
@@ -33,7 +36,7 @@ package main
 //
 // }
 
-//					fourth task
+//					fourth task - через switch case норм, но сам итератор не надо было выводить. читай задание
 //func main() {
 //	for i := 0; i <= 99; i++ {
 //		if i%3 == 0 && i%5 == 0 {
@@ -64,7 +67,9 @@ package main
 //	}
 //}
 
-// fifth task
+// fifth task - неправильно, читай задание. логика должна быть в функции (не в main), а в main ты вызываешь эту функцию
+// скан stdin не обязательно было, но норм
+// почитай про default в switch операторе
 
 //func boom() error {
 //	return errors.New("age entered incorrectly")
