@@ -6,8 +6,8 @@ type Person struct {
 	age     int
 }
 
-func (p *Person) NewPerson(name, surname string, age int) *Person {
-	return &Person{
+func (p *Person) NewPerson(name, surname string, age int) Person {
+	return Person{
 		name,
 		surname,
 		age,
